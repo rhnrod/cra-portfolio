@@ -1,9 +1,9 @@
 import { styled } from 'styled-components'
 import Titulo from '../../components/Titulo'
+import Avatar from '../../components/Avatar'
+import Paragrafo from '../../components/Paragrafo'
+import { BotaoTema, Descricao, SidebarContainer } from './styles'
 
-const Avatar = styled.img`
-  border-radius: 50%;
-`
 const Aside = styled.aside`
   display: flex;
   flex-direction: column;
@@ -11,8 +11,17 @@ const Aside = styled.aside`
 
 const Sidebar = () => (
   <Aside>
-    <Avatar src="https://github.com/rhnrod.png" />
-    <Titulo fontSize={20}>Rhuan Emanuel</Titulo>
+    <SidebarContainer>
+      <Avatar />
+      <Titulo fontSize={20}>Rhuan Emanuel</Titulo>
+      <Paragrafo fontSize={16} tipo="secundario">
+        rhnrod
+      </Paragrafo>{' '}
+      <Descricao fontSize={12} tipo="principal">
+        Desenvolvedor Full Stack
+      </Descricao>
+      <BotaoTema>Trocar tema</BotaoTema>
+    </SidebarContainer>
   </Aside>
 )
 
