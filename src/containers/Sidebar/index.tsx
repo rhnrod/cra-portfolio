@@ -9,7 +9,11 @@ const Aside = styled.aside`
   flex-direction: column;
 `
 
-const Sidebar = () => (
+type Props = {
+  trocaTema: () => void
+}
+
+const Sidebar = (props: Props) => (
   <Aside>
     <SidebarContainer>
       <Avatar />
@@ -20,7 +24,7 @@ const Sidebar = () => (
       <Descricao fontSize={12} tipo="principal">
         Desenvolvedor Full Stack
       </Descricao>
-      <BotaoTema>Trocar tema</BotaoTema>
+      <BotaoTema onClick={props.trocaTema}>Trocar tema</BotaoTema>
     </SidebarContainer>
   </Aside>
 )
